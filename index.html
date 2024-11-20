@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smallpox - AllePedia</title>
+    <title>AllePedia</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -16,6 +16,9 @@
             background-color: #ffffff;
             padding: 1em;
             border-bottom: 1px solid #a7d7f9;
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
         .site-title {
             font-size: 1.8em;
@@ -31,12 +34,17 @@
             width: 200px;
             padding: 1em;
             background-color: #f8f9fa;
+            position: sticky;
+            top: 70px;
+            height: calc(100vh - 70px);
+            overflow-y: auto;
         }
         .article {
             flex: 1;
             padding: 2em;
             background-color: white;
             box-shadow: 0 0 5px rgba(0,0,0,0.1);
+            margin: 1em;
         }
         .article-title {
             font-size: 2.5em;
@@ -77,6 +85,24 @@
             font-size: 0.9em;
             color: #666;
         }
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .sidebar li {
+            margin: 0.5em 0;
+        }
+        .sidebar a {
+            color: #0645ad;
+            text-decoration: none;
+        }
+        .sidebar a:hover {
+            text-decoration: underline;
+        }
+        .article-container {
+            flex: 1;
+            padding: 1em;
+        }
     </style>
 </head>
 <body>
@@ -88,76 +114,116 @@
         <div class="sidebar">
             <h3>Navigation</h3>
             <ul>
-                <ul>
                 <li><a href="#smallpox">Smallpox</a></li>
                 <li><a href="#help">Help: What Is AllePedia and Alleyfind</a></li>
                 <li><a href="#">Recent Changes</a></li>
                 <li><a href="#">Random Article</a></li>
             </ul>
-            
         </div>
         
-        <div class="article">
-            <h1 class="article-title">Smallpox</h1>
-            
-            <div class="toc">
-                <div class="toc-title">Contents</div>
-                <ul>
-                    <li><a href="#introduction">1. Introduction</a></li>
-                    <li><a href="#history">2. History</a></li>
-                    <li><a href="#symptoms">3. Symptoms</a></li>
-                    <li><a href="#eradication">4. Eradication</a></li>
-                    <li><a href="#references">5. References</a></li>
-                </ul>
+        <div class="article-container">
+            <!-- Smallpox Article -->
+            <div class="article" id="smallpox">
+                <h1 class="article-title">Smallpox</h1>
+                
+                <div class="toc">
+                    <div class="toc-title">Contents</div>
+                    <ul>
+                        <li><a href="#introduction">1. Introduction</a></li>
+                        <li><a href="#history">2. History</a></li>
+                        <li><a href="#symptoms">3. Symptoms</a></li>
+                        <li><a href="#eradication">4. Eradication</a></li>
+                        <li><a href="#references">5. References</a></li>
+                    </ul>
+                </div>
+                
+                <div class="section" id="introduction">
+                    <h2>Introduction</h2>
+                    <p>Smallpox was an infectious disease caused by one of two virus variants, Variola major and Variola minor. The disease was unique to humans and was one of the deadliest diseases in human history. It was declared eradicated worldwide in 1980 following a successful global immunization campaign.</p>
+                </div>
+                
+                <div class="section" id="history">
+                    <h2>History</h2>
+                    <p>Smallpox is believed to have emerged in human populations around 10,000 BCE. The earliest physical evidence of smallpox was found in Egyptian mummies from the 3rd century BCE. The disease played a significant role in human history, affecting populations across continents and contributing to the fall of several civilizations.</p>
+                </div>
+                
+                <div class="section" id="symptoms">
+                    <h2>Symptoms</h2>
+                    <p>Initial symptoms of smallpox included fever, vomiting, and headache. These were followed by characteristic skin lesions that would progress to raised fluid-filled blisters. The disease had a mortality rate of approximately 30% in unvaccinated individuals.</p>
+                </div>
+                
+                <div class="section" id="eradication">
+                    <h2>Eradication</h2>
+                    <p>The World Health Organization (WHO) launched an intensified global eradication program in 1967. On May 8, 1980, the World Health Assembly declared smallpox eradicated, making it the first disease to be eliminated globally through human intervention.</p>
+                </div>
+                
+                <div class="section" id="references">
+                    <h2>References</h2>
+                    <div class="reference">
+                        <p>[1] World Health Organization. (1980). The Global Eradication of Smallpox: Final Report of the Global Commission for the Certification of Smallpox Eradication.</p>
+                        <p>[2] Henderson, D. A. (2009). Smallpox: The Death of a Disease.</p>
+                        <p>[3] Fenner, F., et al. (1988). Smallpox and Its Eradication. World Health Organization.</p>
+                    </div>
+                </div>
             </div>
-            
-            <div class="section" id="introduction">
-                <h2>Introduction</h2>
-                <p>Smallpox was an infectious disease caused by one of two virus variants, Variola major and Variola minor. The disease was unique to humans and was one of the deadliest diseases in human history. It was declared eradicated worldwide in 1980 following a successful global immunization campaign.</p>
-            </div>
-            
-            <div class="section" id="history">
-                <h2>History</h2>
-                <p>Smallpox is believed to have emerged in human populations around 10,000 BCE. The earliest physical evidence of smallpox was found in Egyptian mummies from the 3rd century BCE. The disease played a significant role in human history, affecting populations across continents and contributing to the fall of several civilizations.</p>
-            </div>
-            
-            <div class="section" id="symptoms">
-                <h2>Symptoms</h2>
-                <p>Initial symptoms of smallpox included fever, vomiting, and headache. These were followed by characteristic skin lesions that would progress to raised fluid-filled blisters. The disease had a mortality rate of approximately 30% in unvaccinated individuals.</p>
-            </div>
-            
-            <div class="section" id="eradication">
-                <h2>Eradication</h2>
-                <p>The World Health Organization (WHO) launched an intensified global eradication program in 1967. On May 8, 1980, the World Health Assembly declared smallpox eradicated, making it the first disease to be eliminated globally through human intervention.</p>
-            </div>
-            
-            <div class="section" id="references">
-                <h2>References</h2>
-                <div class="reference">
-                    <p>[1] World Health Organization. (1980). The Global Eradication of Smallpox: Final Report of the Global Commission for the Certification of Smallpox Eradication.</p>
-                    <p>[2] Henderson, D. A. (2009). Smallpox: The Death of a Disease.</p>
-                    <p>[3] Fenner, F., et al. (1988). Smallpox and Its Eradication. World Health Organization.</p>
-                    <div class="article" id="help">
-            <h1 class="article-title">Help: What Is AllePedia and Alleyfind</h1>
-            
-            <div class="section" id="introduction-help">
-                <h2>Introduction</h2>
-                <p>AllePedia is a collaborative online encyclopedia that aims to provide accurate and comprehensive information on a wide range of topics. Alleyfind is a search engine designed to help users find information quickly and efficiently across the web.</p>
-            </div>
-            
-            <div class="section" id="features">
-                <h2>Features</h2>
-                <p>AllePedia offers a user-friendly interface, a vast collection of articles, and a community-driven approach to content creation. Alleyfind provides advanced search capabilities, personalized search results, and integration with AllePedia for seamless information retrieval.</p>
-            </div>
-            
-            <div class="section" id="getting-started">
-                <h2>Getting Started</h2>
-                <p>To start using AllePedia, simply navigate to the main page and use the search bar to find articles of interest. For Alleyfind, enter your query in the search bar to receive relevant results from across the web.</p>
-            </div>
-        </div>
-    </div>
-</body>
-</html>
+
+            <!-- Help Article -->
+            <div class="article" id="help">
+                <h1 class="article-title">Help: What Is AllePedia and Alleyfind</h1>
+                
+                <div class="toc">
+                    <div class="toc-title">Contents</div>
+                    <ul>
+                        <li><a href="#help-introduction">1. Introduction</a></li>
+                        <li><a href="#features">2. Features</a></li>
+                        <li><a href="#getting-started">3. Getting Started</a></li>
+                        <li><a href="#using-alleyfind">4. Using Alleyfind</a></li>
+                        <li><a href="#contributing">5. Contributing</a></li>
+                    </ul>
+                </div>
+                
+                <div class="section" id="help-introduction">
+                    <h2>Introduction</h2>
+                    <p>AllePedia is a collaborative online encyclopedia that aims to provide accurate and comprehensive information on a wide range of topics. Working in conjunction with Alleyfind, our specialized search engine, we create an integrated knowledge ecosystem that makes information discovery and learning more accessible than ever.</p>
+                </div>
+                
+                <div class="section" id="features">
+                    <h2>Features</h2>
+                    <p>AllePedia offers:</p>
+                    <ul>
+                        <li>User-friendly interface for easy navigation</li>
+                        <li>Comprehensive articles on various topics</li>
+                        <li>Community-driven content creation and editing</li>
+                        <li>Integration with Alleyfind search engine</li>
+                        <li>Regular updates and fact-checking</li>
+                    </ul>
+                </div>
+                
+                <div class="section" id="getting-started">
+                    <h2>Getting Started</h2>
+                    <p>To begin using AllePedia, simply browse through our articles using the navigation sidebar or search for specific topics using the search function. New users can create an account to contribute content and participate in discussions.</p>
+                </div>
+
+                <div class="section" id="using-alleyfind">
+                    <h2>Using Alleyfind</h2>
+                    <p>Alleyfind is our integrated search engine that helps you find information both within AllePedia and across the web. It features:</p>
+                    <ul>
+                        <li>Advanced search algorithms</li>
+                        <li>Personalized search results</li>
+                        <li>Integration with AllePedia articles</li>
+                        <li>Real-time search suggestions</li>
+                    </ul>
+                </div>
+
+                <div class="section" id="contributing">
+                    <h2>Contributing</h2>
+                    <p>We welcome contributions from knowledgeable individuals. To contribute:</p>
+                    <ul>
+                        <li>Create an account</li>
+                        <li>Review our content guidelines</li>
+                        <li>Start editing or creating articles</li>
+                        <li>Participate in community discussions</li>
+                    </ul>
                 </div>
             </div>
         </div>
